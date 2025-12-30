@@ -1,4 +1,4 @@
-# RAG Chatbot for ABC EdTech Platform
+# RAG Chatbot for EdTech Platform
 
 This project is a **Retrieval-Augmented Generation (RAG) chatbot** built for an EdTech platform. It allows users to ask questions related to courses, content, and services, and provides intelligent responses using a backend Flask API. The frontend is built using **React**, creating a modern, interactive web interface.  
 

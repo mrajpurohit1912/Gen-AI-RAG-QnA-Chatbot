@@ -1,16 +1,16 @@
 from langchain_groq.chat_models import ChatGroq
-# from langchain.embeddings import HuggingFaceEmbeddings
-# from langchain.document_loaders import  CSVLoader
-# from langchain.vectorstores import FAISS
 from langchain.prompts import PromptTemplate
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
-
-#from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.document_loaders import CSVLoader
 from langchain_community.vectorstores import FAISS
 
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+CSV_FILE_PATH = BASE_DIR / "data" / "faq.csv"
 
 
 import warnings
@@ -18,8 +18,7 @@ from dotenv import load_dotenv
 warnings.filterwarnings("ignore", category=UserWarning)
 _=load_dotenv()
 
-CSV_FILE_PATH = "/home/mahavir/code/python_projects/rag_project/backend/data/faq.csv"#"../data/faq.csv"
-
+#CSV_FILE_PATH = "/home/mahavir/code/python_projects/rag_project/backend/data/faq.csv"
 # initalizing LLM
 llm = ChatGroq(model="openai/gpt-oss-20b")
 
