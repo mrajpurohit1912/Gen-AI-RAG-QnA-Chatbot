@@ -48,7 +48,7 @@ Frontend: React, JavaScript, HTML, CSS
 
 Backend: Python, Flask, Flask-CORS
 
-Communication: REST API (fetch POST requests)
+Communication: REST API
 ```
 
 ## 1. Backend Setup
