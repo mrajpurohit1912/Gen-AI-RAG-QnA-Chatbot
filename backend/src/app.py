@@ -1,6 +1,5 @@
 from langchain_groq.chat_models import ChatGroq
-from langchain.prompts import PromptTemplate
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.document_loaders import CSVLoader
@@ -18,7 +17,7 @@ from dotenv import load_dotenv
 warnings.filterwarnings("ignore", category=UserWarning)
 _=load_dotenv()
 
-#CSV_FILE_PATH = "/home/mahavir/code/python_projects/rag_project/backend/data/faq.csv"
+
 # initalizing LLM
 llm = ChatGroq(model="openai/gpt-oss-20b")
 
